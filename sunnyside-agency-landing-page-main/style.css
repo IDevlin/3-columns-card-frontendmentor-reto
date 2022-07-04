@@ -1,0 +1,529 @@
+*{
+    margin: 0;
+    box-sizing: border-box;   
+   }
+   
+   :root {
+     --soft-red: hsl(7, 99%, 70%);
+     --yellow: hsl(51, 100%, 49%);
+     --Dark-desaturated-cyan: #25564b;
+     --Dark-blue: hsl(198, 62%, 26%);
+     --Dark-moderate-cyan: hsl(168, 34%, 41%);
+     --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+     --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+     --Dark-grayish-blue: hsl(232, 10%, 55%);
+     --Grayish-blue: hsl(210, 4%, 67%);
+     --White: hsl(0, 0%, 100%);
+   
+     --font1: 'Fraunces', 'serif';
+     --font2: 'Barlow', 'san-serif';
+   }
+   
+   body
+    {
+       font-family:var(--font2);
+   
+   }
+   
+   .container
+    {
+       padding: 80px 0;  
+       width: 90%;
+       margin: 0 auto;
+       max-width: 1200px;
+   
+   }
+   
+   .header-container
+    {
+       background-image: url(./images/mobile/image-header.jpg);
+       background-size: cover;
+       background-position: center;
+   }
+   
+   .nav 
+   {
+       padding: 30px 0;
+       display: grid;
+       align-items: center;
+       grid-template-columns: repeat(2, max-content);
+       justify-content: space-between;
+   }
+   
+   .nav-links 
+   {
+       position: fixed;
+       top: 80px;
+       left: 0;
+       right: 0;
+       width: 90%;
+       margin: 0 auto;
+       padding: 2em 1em;
+       background-color: #fff;
+       display: grid;
+       gap: 1em;
+       opacity: 0;
+       pointer-events: unset;
+       transition: .3s opacity;
+   }
+   
+   .nav-links:target
+   {
+       pointer-events: unset;
+       opacity: 1;
+   }
+   
+   .nav-hamburguer
+   { 
+        pointer-events: unset;
+   }
+   
+   .nav-links::before
+   {
+       content: "";
+       position: absolute;
+       border-top: 10px solid transparent;
+       border-left: 10px solid transparent;
+       border-right: 10px solid #fff;
+       border-bottom: 10px solid #fff;
+       top: -20px;
+       right: 0;
+   }
+   
+   .nav-link
+      {   
+          justify-self: center;
+          text-decoration: none;
+          color: var(--Very-dark-grayish-blue);
+      }
+   
+   .nav-link-cta
+   {   
+       color: var(--dark-blue);
+       background-color: var(--yellow);
+       padding: 1em 1.5em;
+       border-radius: 2em;
+       font-family: var(--font1);
+   }
+   
+   
+   .section-main 
+   {
+       height: 450px;
+       color: var(--White);
+       text-align: center;
+       
+   }
+   
+   .section-title
+    {
+       font-size: 2.5rem;
+       font-family: var(--font1);
+       font-weight: 800;
+       text-transform: uppercase;
+       letter-spacing: 8px;
+       margin-bottom: 3.5rem;
+       margin-top: -2rem;
+   }
+   
+   
+   .services 
+   {
+       width: 100%;
+       display: grid;
+       grid-template-rows: repeat(2, 250px 400px );
+   }
+   
+   .services-image 
+   {
+       background-image: url(./images/mobile/image-transform.jpg);
+       background-size: cover;
+       background-position: center;
+   }
+   
+   .services-texts
+    {
+       padding: 1rem 1.5rem;
+       place-self: center;
+       text-align: center;
+       --color: hsl(51, 100%, 49%, 0.363);
+   }
+   
+   .services-texts-2
+   {
+       --color:hsl(7, 99%, 70%, 0.363);
+   
+   }
+   
+   .services-title
+    {
+       font-size: 2rem;
+       font-family: var(--font1);
+       color: var(--Very-dark-desaturated-blue);
+   }
+   
+   .services-paragraph
+    {
+       line-height: 1.5;
+       color: var(--Very-dark-desaturated-blue);
+       margin: 1.5rem 0;
+   }
+   
+   .services-cta 
+   {
+       color: var(--Very-dark-desaturated-blue);
+       text-decoration: none;
+       text-transform: uppercase;
+       font-family: var(--font1);
+       position: relative;
+   }
+   
+   
+   .services-cta::before 
+   {
+       content: '';
+       position: absolute;
+       background-color: var(--color);
+       bottom: 0;
+       width: 100%;
+       height: 30%;
+       border-radius: 2em;
+       z-index: -1;
+   }
+   
+   .services-image-2 
+   {
+       background-image: url(./images/mobile/image-stand-out.jpg);
+   }
+   
+   .jobs 
+   {
+       display: grid;
+       grid-auto-rows: 600px;
+   }
+   
+   .jobs-section
+    {
+       display: grid;
+       align-content: flex-end;
+       background-image: url(./images/mobile/image-graphic-design.jpg);
+       background-size: cover;
+       background-position: center;
+       padding: 2.5rem 1.5rem;
+       color: var(--Dark-desaturated-cyan);
+   }
+   
+   .jobs-name
+    {
+       font-family: var(--font1);
+       font-size: 1.7rem;
+       margin-bottom: 1.5rem;
+       font-weight: 900;
+       text-align: center;
+   }
+   
+   .jobs-paragraph 
+   {
+       line-height: 1.5;
+       margin-top: 1rem;
+       margin-bottom: 1.5rem;
+       text-align: center;
+   }
+   
+   .jobs-section-2 
+   {
+       background-image: url(./images/mobile/image-photography.jpg);
+       color: var(--Dark-blue);
+   }
+   
+   .testimonials
+   {
+       text-align: center;
+       margin-top: 4rem;
+   }
+   
+   .testimonials-title
+   {
+       font-size: 0.9rem;
+       letter-spacing:5px;
+       margin-bottom: 4rem;
+       font-weight: 800;
+       color: var(--Grayish-blue);
+       text-transform: uppercase;
+       font-family: var(--font1);
+   }
+   
+   .testimonials-container
+   {
+       padding: 60 0;
+       display: grid;
+       gap: 5rem;
+   
+   }
+   
+   .testimonials-img 
+   {
+     width: 100px;
+     height: 100px;
+     object-fit: cover;
+     border-radius: 50%;
+   }
+   
+   .testimonials-paragraph
+   {
+       color: var(--Dark-blue);
+       line-height: 1.5;
+       margin: 1.5rem;
+   }
+   
+   .testimonials-name
+   {
+       color: var(--Very-dark-desaturated-blue);
+       margin-bottom: .7rem;
+       font-family: var(--font1);
+       font-weight: 800;
+   }
+   
+   .testimonials-job
+   {
+       color: var(--Grayish-blue);
+   }
+   
+   .gallery
+   {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       margin-top: 6rem;
+   }
+   
+   .gallery-image
+   {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+      background-size: cover;
+      background-position: center;
+   }
+   
+   .gallery-image:nth-of-type(2)
+   {
+     background-image: url(./images/mobile/image-gallery-orange.jpg);
+   }
+   
+   .gallery-image:nth-of-type(3)
+   {
+     background-image: url(./images/mobile/image-gallery-cone.jpg);
+   }
+   
+   .gallery-image:nth-of-type(4)
+   {
+     background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+   }
+   
+   .footer
+   {
+       background-color: #90D4C5;
+       text-align: center;
+     
+   }
+   
+   .footer-logo
+   {
+       width: 150px;
+       margin: -2rem 0 2rem;
+   }
+   
+   .footer-nav
+   {
+      width: 90%;
+      max-width: 400px;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center; 
+   }
+   
+   .footer-link
+   {
+       color: var(--Dark-moderate-cyan);
+       text-decoration: none;
+       padding: 1.5rem 0 3rem;
+   }
+   
+   .footer-social
+   {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      justify-content: center;
+      align-items: center;
+      gap: 2em; 
+   }   
+   
+   @media (min-width:768px) {
+      
+      .header-container
+       {
+          background-image: url(./images/desktop/image-header.jpg);
+         
+      }
+   
+      .nav-hamburguer
+      {
+       display: none;  
+      }
+   
+      .nav-links:target{
+       pointer-events: unset;
+       opacity: 1;
+   }
+      
+      .nav-links
+      {
+       background-color: unset;
+       position: unset;
+       width: unset;
+       margin: unset;
+       opacity: 1;
+       display: grid;
+       grid-auto-flow: column;
+       gap: 1.2rem;
+       align-items: center;
+       pointer-events: unset;
+      }
+   
+      .nav-link
+      {
+          text-decoration: none;
+          color: var(--White);
+      }
+   
+      .nav-link-cta
+      {   
+          color: var(--Dark-blue);
+          background-color: var(--White);
+          padding: .7rem 1.5em;
+          border-radius: 20px;
+          font-family: var(--font1);
+      }
+   
+      .services 
+   {
+       width: 100%;
+       display: grid;
+       grid-template-rows: repeat(2, 500px );
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-areas:
+        'text1 img1'
+       'img2 text2' ;
+   }
+   
+   .services-image 
+   {
+       background-image: url(./images/desktop/image-transform.jpg);
+       grid-area: img1;
+   }
+   
+   .services-image-2 
+   {
+       background-image: url(./images/desktop/image-stand-out.jpg);
+       grid-area: img2;
+   }
+   
+   .services-texts
+    {
+       padding: 2rem 3rem;
+       text-align: start;
+       grid-area: text1;
+   
+    }
+   
+   .services-texts-2
+   {
+       grid-area: text2;
+   
+   }
+   
+   .services-title
+    {
+       font-size: 2rem;
+       font-family: var(--font1);
+       color: var(--Very-dark-desaturated-blue);
+   }
+   
+   .jobs 
+   {
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: 500px;
+   
+   }
+   
+   .jobs-section
+    {
+       background-image: url(./images/desktop/image-graphic-design.jpg);
+   }
+   
+   
+   
+   .jobs-section-2 
+   {
+       background-image: url(./images/desktop/image-photography.jpg);
+   }
+   
+   .testimonials
+   {
+       text-align: center;
+       margin-top: 4rem;
+   }
+   
+   
+   .testimonials-container
+   {
+      padding: 80px;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 2rem;
+   
+   }
+   
+   
+   .testimonials-paragraph
+   {
+       margin: 2.5rem 1rem;
+   }
+   
+   .gallery
+   {
+       display: grid;
+       grid-template-columns: repeat(4,1fr);
+       margin-top: 6rem;
+       grid-template-rows: 350px;
+   }
+   
+   .gallery-image
+   {
+       aspect-ratio: unset;
+      background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+   }
+   
+   .gallery-image:nth-of-type(2)
+   {
+     background-image: url(./images/desktop/image-gallery-orange.jpg);
+   }
+   
+   .gallery-image:nth-of-type(3)
+   {
+     background-image: url(./images/desktop/image-gallery-cone.jpg);
+   }
+   
+   .gallery-image:nth-of-type(4)
+   {
+     background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+   }
+   
+   .footer-link
+   {
+      
+       padding: 2rem 0 5rem;
+   }
+   
+   }
